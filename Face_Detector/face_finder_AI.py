@@ -379,11 +379,16 @@ def train(device, start_epoch, n_epochs, pathToManifest, pathToData, pathToLogs,
 def main():
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     
+    # Make sure that these paths are correct
+    # pathToManifest should be the text file from the dataset
+    # pathToData should be the folder with the images from the dataset
+    # pathToLogs is the folder you want to store the logs in
+    # path to model is where ever the model (.pt file) is stored
     train(device, start_epoch = 166, n_epochs = 15,
           pathToManifest="Data/wider_face_split/wider_face_train_bbx_gt.txt",
           pathToData="Data/WIDER_train/images/",
-          pathToLogs="D:\Model_Logs",
-          pathToModel = "D:/Model_Logs/facenet_165.pt")
+          pathToLogs="Model_Logs",
+          pathToModel = "facenet_165.pt")
 
 if __name__ == "__main__":
     main()

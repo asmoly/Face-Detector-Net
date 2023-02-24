@@ -12,15 +12,17 @@ import numpy as np
 from PIL import Image
 import face_finder_AI
 
-cam = cv2.VideoCapture(1, cv2.CAP_DSHOW)
+# This changes which camera you are using
+camera = 0
+
+cam = cv2.VideoCapture(camera, cv2.CAP_DSHOW)
 cam.set(cv2.CAP_PROP_FRAME_WIDTH, 1024)
 cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 1024)
 
-people = ("Elena", "Irina", "Nikolai", "Sasha")
-
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-model = face_finder_AI.load_model("D:/Model_Logs/facenet_165.pt").to(device)
+# Make sure this path works
+model = face_finder_AI.load_model("facenet_165.pt").to(device)
 
 while True:
     ret, image = cam.read()
