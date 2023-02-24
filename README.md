@@ -14,11 +14,11 @@ After the DNN returns a result, we need to create the bounding box around the fa
 
 Another way we could have made this DNN was by outputing array of coordinates for all bounding boxes rather than ouputing data per every pixel. But this would limit the amount of faces it can find because there would be a limited set of elements in an array returned by the DNN. This is not a problem for this project since I trained it to compute face data per pixel and then post-process it.
 
-## Testing the DNN:
+### Testing the DNN:
 If you want to run this model yourself download the FaceDetector folder. To test the DNN run: `python model_tester.py` program. 
 If something doesn't work make sure to check the path to the model. Results may be worse in artificial light.
 
-## Training the DNN:
+### Training the DNN:
 You need to download the ["wider faces dataset"](http://shuoyang1213.me/WIDERFACE/). Get data, labels/annotations, for training and validation datasets. You will need the directories: "wider_face_split", "WIDER_train", and "WIDER_val". It may be easier to also put all these folders in a directory called "Data". Then download the "FaceDetector" directory up top and copy the "Data" directory into that folder. 
 
 To train the DNN run `python face_finder_AI.py`. If something doesn't work scroll to the bottom of the file where all the paths are specified and make sure they are all correct. The pre-trained model is in the directory FaceDetector trained for 165 epochs. It takes up to 100-200 epochs to see good results.
