@@ -17,3 +17,4 @@ After the neural net has given a result it needs to somehow create the bounding 
 The other way I could have made this neural net was by just outputing coordinates of the bounding box rather than ouputing every pixel, but this would limit the amount of faces I could find because there would be a limited amount of coordinates that the neural net could output. But since I used a mask the neural net is able to find as many faces as you want.
 
 Using the neural network:
+If you want to run this neural network yourself download the Face_Detector folder and run the model_tester.py program. If something doesn't work make sure to check the path to the model.
