@@ -21,7 +21,7 @@ Using the neural network:
 If you want to run this neural network yourself download the Face_Detector folder and run the "model_tester.py" program. If something doesn't work make sure to check the path to the model. Results may be worse in artificial light.
 
 Training the neural network:
-You will want to download the wider faces dataset and annotations (both the training and validation download) from this link (http://shuoyang1213.me/WIDERFACE/) from here you will need the directories, "wider_face_split", "WIDER_train", and "WIDER_val". It may be easier to also put all these folders in a directory called "Data". Then download the "Face_Detector" directory up top and paste the "Data" directory into that folder. Now you should be able to run the "face_finder_AI.py" file. If something doesn't work scroll to the bottom of the file where all the paths are specified and make sure they are all correct.
+You will want to download the wider faces dataset and annotations (both the training and validation download) from this link (http://shuoyang1213.me/WIDERFACE/) from here you will need the directories, "wider_face_split", "WIDER_train", and "WIDER_val". It may be easier to also put all these folders in a directory called "Data". Then download the "Face_Detector" directory up top and paste the "Data" directory into that folder. Now you should be able to run the "face_finder_AI.py" file. If something doesn't work scroll to the bottom of the file where all the paths are specified and make sure they are all correct. The pretrained model in the directory Face_Detector trained for 165 epochs so it may take a while to see good results.
 
 
 Wider Faces Dataset: http://shuoyang1213.me/WIDERFACE/
